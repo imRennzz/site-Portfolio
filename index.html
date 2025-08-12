@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renan Rosa - Desenvolvedor Full Stack</title>
+    <title>Renan Rosa - Desenvolvedor</title>
     <style>
         * {
             margin: 0;
@@ -23,19 +23,6 @@
             --glass-border: rgba(255, 255, 255, 0.1);
         }
 
-        /* Light mode variables */
-        [data-theme="light"] {
-            --primary-color: #4f46e5;
-            --secondary-color: #7c3aed;
-            --accent-color: #0891b2;
-            --bg-dark: #ffffff;
-            --bg-darker: #f8fafc;
-            --text-light: #1e293b;
-            --text-muted: #64748b;
-            --glass-bg: rgba(0, 0, 0, 0.05);
-            --glass-border: rgba(0, 0, 0, 0.1);
-        }
-
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-dark);
@@ -43,6 +30,8 @@
             line-height: 1.7;
             overflow-x: hidden;
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
 
         /* Background Animation */
         .animated-bg {
@@ -65,11 +54,6 @@
             background: radial-gradient(circle at 20% 80%, var(--primary-color)15 0%, transparent 50%),
                         radial-gradient(circle at 80% 20%, var(--secondary-color)15 0%, transparent 50%);
             animation: bgPulse 8s ease-in-out infinite alternate;
-        }
-
-        [data-theme="light"] .animated-bg::before {
-            background: radial-gradient(circle at 20% 80%, var(--primary-color)08 0%, transparent 50%),
-                        radial-gradient(circle at 80% 20%, var(--secondary-color)08 0%, transparent 50%);
         }
 
         @keyframes bgPulse {
@@ -266,12 +250,20 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             display: block;
+            font-family: 'Inter', sans-serif;        
+            font-weight: 800;                        
+            letter-spacing: -0.02em;
         }
 
         .hero .title {
             color: var(--text-muted);
+            font-family: 'Inter', sans-serif;        
+            font-style: italic;                      /* ← NOVO: itálico */
             font-weight: 400;
-            margin-top: 0.5rem;
+            margin-top: 1rem;                        /* ← MUDADO: de 0.5rem para 1rem */
+            font-size: clamp(1.5rem, 4vw, 2.5rem);  /* ← NOVO: tamanho responsivo */
+            position: relative;                      /* ← NOVO: para as linhas decorativas */
+            opacity: 0.9;
         }
 
         .hero p {
@@ -1012,7 +1004,7 @@
         <div class="hero-content">
             <h1>
                 <span class="name">Renan Rosa</span>
-                <span class="title">Desenvolvedor Full Stack</span>
+                <span class="title">Desenvolvedor de Sistemas</span>
             </h1>
             <p>Criando experiências digitais únicas, combinando design moderno com código limpo e eficiente.</p>
             <a href="#projetos" class="cta-button">
@@ -1026,12 +1018,12 @@
         <h2 class="section-title">Sobre Mim</h2>
         <div class="about-content">
             <div class="about-image">
-                <img src="1727648300665.jpg" alt="Minha foto" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px;">
+                <img src="foto.png" alt="Minha foto" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px;">
             </div>
             <div class="about-text">
                 <p>Sou um desenvolvedor Full Stack apaixonado por criar soluções inovadoras que combinam funcionalidade excepcional com design elegante. Minha jornada na tecnologia é movida pela curiosidade constante e pelo desejo de transformar ideias em realidade digital.</p>
                 
-                <p>Trabalho com tanto no desenvolvimento de interfaces modernas e responsivas quanto na construção de sistemas robustos e escaláveis. Acredito que a tecnologia deve ser uma ponte entre problemas complexos e soluções simples e intuitivas.</p>
+                <p>Trabalho tanto no desenvolvimento de interfaces modernas e responsivas quanto na construção de sistemas robustos e escaláveis. Acredito que a tecnologia deve ser uma ponte entre problemas complexos e soluções simples e intuitivas.</p>
                 
                 <p>Quando não estou codando, estou sempre explorando novas tecnologias, contribuindo para projetos open source ou pensando em formas de melhorar a experiência do usuário através do código.</p>
             </div>
@@ -1162,31 +1154,6 @@
                 <span class="demo-indicator" onclick="goToSlide(2)"></span>
                 <span class="demo-indicator" onclick="goToSlide(3)"></span>
                 <span class="demo-indicator" onclick="goToSlide(4)"></span>
-            </div>
-
-            <div class="demo-info">
-                <div class="demo-features">
-                    <div class="demo-feature">
-                        <div class="demo-feature-icon">🎨</div>
-                        <div class="demo-feature-title">Design Retrô</div>
-                        <div class="demo-feature-desc">Interface inspirada na estética de Miami dos anos 80</div>
-                    </div>
-                    <div class="demo-feature">
-                        <div class="demo-feature-icon">📊</div>
-                        <div class="demo-feature-title">Gráficos Dinâmicos</div>
-                        <div class="demo-feature-desc">Visualização de dados em tempo real</div>
-                    </div>
-                    <div class="demo-feature">
-                        <div class="demo-feature-icon">🔄</div>
-                        <div class="demo-feature-title">Sistema Completo</div>
-                        <div class="demo-feature-desc">Gerenciamento total de estoque e vendas</div>
-                    </div>
-                    <div class="demo-feature">
-                        <div class="demo-feature-icon">🛡️</div>
-                        <div class="demo-feature-title">Seguro & Confiável</div>
-                        <div class="demo-feature-desc">Banco de dados MySQL com backup automático</div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
